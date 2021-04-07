@@ -28,7 +28,9 @@ class RegisterViewController: UIViewController {
                 }
                 dvc.user = email
                 dvc.modalPresentationStyle = .fullScreen
-                present(dvc, animated: true, completion: nil)
+                present(dvc, animated: true) {
+                    self.navigationController?.popViewController(animated: false)
+                }
             }
         }
     }

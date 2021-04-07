@@ -19,11 +19,7 @@ class CheckViewController: UIViewController {
     }
     
     @IBAction func touchUpOK(_ sender: Any) {
-        let navigationController = self.presentingViewController as? UINavigationController
-            
-        self.dismiss(animated: true) {
-            let _ = navigationController?.popToRootViewController(animated: true)
-        }
+        dismiss(animated: true, completion: nil)
     }
 
     private func setConfigure() {
