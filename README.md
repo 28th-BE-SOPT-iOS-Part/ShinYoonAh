@@ -5,7 +5,7 @@
 
 |Week      |Content     |Assignment  |Duedate |README |   
 |:------------:|:----------:|:-----:|:----------:|:------:|
-|`1주차`|iOS기초, H.I.G를 통한 컴포넌트의 이해, 화면 전환 |[Week 1](https://github.com/28th-BE-SOPT-iOS-Part/ShinYoonAh/tree/main/assignment/PA1)|21/04/09 ||
+|`1주차`|iOS기초, H.I.G를 통한 컴포넌트의 이해, 화면 전환 |[Week 1](https://github.com/28th-BE-SOPT-iOS-Part/ShinYoonAh/tree/main/assignment/PA1)|21/04/09 |[🗂 🗂](https://github.com/28th-BE-SOPT-iOS-Part/ShinYoonAh/blob/main/assignment/PA1/README.md)|
 |`2주차`|Autolayout를 통한 기초 UI구성, Scroll View의 이해 || ||
 |`3주차`|TableView, CollectionView, 데이터 전달 방식 || ||
 |`4주차`|Cocoapods&Networking + 솝커톤 전 보충 세미나 || ||
