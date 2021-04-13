@@ -24,10 +24,10 @@ class ViewController: UIViewController {
     @IBAction func touchUpLogin(_ sender: Any) {
         if let email = emailTextField.text, let password = passwordTextField.text {
             if email != "" && password != "" {
-                guard let dvc = storyboard?.instantiateViewController(identifier: "CheckViewController") as? CheckViewController else {
+                let sb = UIStoryboard.init(name: "Tabbar", bundle: nil)
+                guard let dvc = sb.instantiateViewController(identifier: "TabbarController") as? TabbarController else {
                     return
                 }
-                dvc.user = email
                 dvc.modalPresentationStyle = .fullScreen
                 present(dvc, animated: true, completion: nil)
             }

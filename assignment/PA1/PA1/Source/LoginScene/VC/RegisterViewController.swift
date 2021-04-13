@@ -23,10 +23,10 @@ class RegisterViewController: UIViewController {
         if let email = emailTextField.text, let password = passwordTextField.text, let confirm = confirmTextField.text {
             if email != "" && password != ""
                 && confirm != "" && password == confirm {
-                guard let dvc = storyboard?.instantiateViewController(identifier: "CheckViewController") as? CheckViewController else {
+                let sb = UIStoryboard.init(name: "Tabbar", bundle: nil)
+                guard let dvc = sb.instantiateViewController(identifier: "TabbarController") as? TabbarController else {
                     return
                 }
-                dvc.user = email
                 dvc.modalPresentationStyle = .fullScreen
                 present(dvc, animated: true) {
                     self.navigationController?.popViewController(animated: false)
