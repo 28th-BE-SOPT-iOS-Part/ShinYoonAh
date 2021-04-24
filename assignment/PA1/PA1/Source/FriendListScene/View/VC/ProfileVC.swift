@@ -39,7 +39,6 @@ class ProfileVC: UIViewController {
             break
         }
     }
-
     
     @IBAction func touchUpDismiss(_ sender: Any) {
         dismiss(animated: true, completion: nil)
