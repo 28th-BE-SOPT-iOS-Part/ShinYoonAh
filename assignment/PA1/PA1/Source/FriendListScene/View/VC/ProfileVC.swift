@@ -10,13 +10,29 @@ import UIKit
 class ProfileVC: UIViewController {
     var viewTranslation = CGPoint(x: 0, y: 0)
 
+    @IBOutlet weak var profileImage: UIButton!
+    @IBOutlet weak var userNameLabel: UILabel!
+    
+    var image: String?
+    var name: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setGesture()
+        setConfigure()
     }
     
     private func setGesture() {
         view.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(handleDismiss)))
+    }
+    
+    func setConfigure() {
+        if let image = UIImage(named: image ?? "") {
+            profileImage.setImage(image, for: .normal)
+            profileImage.imageView?.contentMode = .scaleAspectFill
+            profileImage.imageView?.sizeToFit()
+        }
+        userNameLabel.text = name
     }
 
     @objc

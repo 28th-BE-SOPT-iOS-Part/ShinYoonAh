@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gzU-pT-02O">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -16,35 +16,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="친구" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yPS-Rq-u4m">
-                                <rect key="frame" x="14" y="75" width="38.5" height="26.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6dU-0U-oQn">
-                                <rect key="frame" x="14" y="119.5" width="59" height="58"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rFt-BH-oU9">
+                                <rect key="frame" x="0.0" y="44" width="414" height="52"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="친구" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fo4-4E-LtB">
+                                        <rect key="frame" x="14" y="13" width="38.5" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sb4-Ot-J1G">
+                                        <rect key="frame" x="374" y="13.5" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="3d5-JQ-Yjt"/>
+                                            <constraint firstAttribute="width" constant="25" id="bGn-uH-PaD"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="58" id="AZI-mn-6j9"/>
-                                    <constraint firstAttribute="width" constant="59" id="feu-bs-E3F"/>
+                                    <constraint firstAttribute="height" constant="52" id="POQ-yi-EqQ"/>
+                                    <constraint firstItem="fo4-4E-LtB" firstAttribute="centerY" secondItem="rFt-BH-oU9" secondAttribute="centerY" id="TfS-N3-pss"/>
+                                    <constraint firstItem="Sb4-Ot-J1G" firstAttribute="centerY" secondItem="rFt-BH-oU9" secondAttribute="centerY" id="ZDd-p4-AVI"/>
+                                    <constraint firstItem="fo4-4E-LtB" firstAttribute="leading" secondItem="rFt-BH-oU9" secondAttribute="leading" constant="14" id="ozO-uC-NrT"/>
+                                    <constraint firstAttribute="trailing" secondItem="Sb4-Ot-J1G" secondAttribute="trailing" constant="15" id="vS4-JY-soT"/>
                                 </constraints>
-                                <state key="normal" image="friendtabProfileImg"/>
-                                <connections>
-                                    <action selector="touchUpProfile:" destination="gzU-pT-02O" eventType="touchUpInside" id="pwq-N0-W75"/>
-                                </connections>
-                            </button>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="exg-4k-dh2">
+                                <rect key="frame" x="0.0" y="96" width="414" height="766"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ctz-YH-3wJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="yPS-Rq-u4m" firstAttribute="leading" secondItem="ctz-YH-3wJ" secondAttribute="leading" constant="14" id="0Mc-qc-n9f"/>
-                            <constraint firstItem="6dU-0U-oQn" firstAttribute="top" secondItem="yPS-Rq-u4m" secondAttribute="bottom" constant="18" id="0fy-uD-8XP"/>
-                            <constraint firstItem="6dU-0U-oQn" firstAttribute="leading" secondItem="yPS-Rq-u4m" secondAttribute="leading" id="KgL-bB-zDI"/>
-                            <constraint firstItem="yPS-Rq-u4m" firstAttribute="top" secondItem="ctz-YH-3wJ" secondAttribute="top" constant="31" id="ijH-4t-Mak"/>
+                            <constraint firstItem="ctz-YH-3wJ" firstAttribute="trailing" secondItem="rFt-BH-oU9" secondAttribute="trailing" id="GXU-dd-JAh"/>
+                            <constraint firstItem="rFt-BH-oU9" firstAttribute="top" secondItem="ctz-YH-3wJ" secondAttribute="top" id="GpU-Re-bUQ"/>
+                            <constraint firstItem="ctz-YH-3wJ" firstAttribute="bottom" secondItem="exg-4k-dh2" secondAttribute="bottom" id="OXN-hj-pEU"/>
+                            <constraint firstItem="exg-4k-dh2" firstAttribute="top" secondItem="rFt-BH-oU9" secondAttribute="bottom" id="S0V-gW-leT"/>
+                            <constraint firstItem="ctz-YH-3wJ" firstAttribute="trailing" secondItem="exg-4k-dh2" secondAttribute="trailing" id="jy2-oQ-QOA"/>
+                            <constraint firstItem="rFt-BH-oU9" firstAttribute="leading" secondItem="ctz-YH-3wJ" secondAttribute="leading" id="wec-TX-3t5"/>
+                            <constraint firstItem="exg-4k-dh2" firstAttribute="leading" secondItem="ctz-YH-3wJ" secondAttribute="leading" id="wge-ub-Y1B"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="profileButton" destination="6dU-0U-oQn" id="1pn-BW-bRG"/>
+                        <outlet property="friendTableView" destination="exg-4k-dh2" id="XN4-jv-FwQ"/>
+                        <outlet property="settingButton" destination="Sb4-Ot-J1G" id="Nt4-9s-E55"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pHe-bi-dsI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -182,6 +200,10 @@
                             <constraint firstItem="U2U-rH-hd7" firstAttribute="centerX" secondItem="1YT-li-oud" secondAttribute="centerX" id="xkx-1L-GNp"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="profileImage" destination="nnA-dh-NH0" id="7YJ-y3-Fla"/>
+                        <outlet property="userNameLabel" destination="FmB-zE-Zqn" id="FH3-5x-E16"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2gz-De-TTY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -189,7 +211,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="friendtabProfileImg" width="59" height="58"/>
         <image name="profileCloseBtn" width="14" height="14"/>
         <image name="profileEditImg" width="20" height="21"/>
         <image name="profileStoryImg" width="20" height="23"/>
