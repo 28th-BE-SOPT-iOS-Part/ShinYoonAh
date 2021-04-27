@@ -60,8 +60,7 @@ extension FriendListVC: UITableViewDelegate {
             dvc.image = friendList[indexPath.row].image
             dvc.name = friendList[indexPath.row].userName
         }
-        
-        dvc.modalPresentationStyle = .fullScreen
+        dvc.modalPresentationStyle = .overCurrentContext
         present(dvc, animated: true, completion: nil)
     }
 }
@@ -99,15 +98,15 @@ extension FriendListVC {
     private func makeData() {
         friendList.append(contentsOf: [
             FriendDataModel(image: "profileImage1", userName: "김솝트", statusMessage: "인생 어렵다"),
-            FriendDataModel(image: "profileImage2", userName: "김솝트", statusMessage: "인생 어렵다"),
-            FriendDataModel(image: "profileImage3", userName: "김솝트", statusMessage: "인생 어렵다"),
-            FriendDataModel(image: "profileImage4", userName: "김솝트", statusMessage: "인생 어렵다"),
-            FriendDataModel(image: "profileImage5", userName: "김솝트", statusMessage: "인생 어렵다"),
-            FriendDataModel(image: "profileImage6", userName: "김솝트", statusMessage: "인생 어렵다"),
-            FriendDataModel(image: "profileImage7", userName: "김솝트", statusMessage: "인생 어렵다"),
-            FriendDataModel(image: "profileImage8", userName: "김솝트", statusMessage: "인생 어렵다"),
-            FriendDataModel(image: "profileImage9", userName: "김솝트", statusMessage: "인생 어렵다"),
-            FriendDataModel(image: "profileImage10", userName: "김솝트", statusMessage: "인생 어렵다")
+            FriendDataModel(image: "profileImage2", userName: "이솝트", statusMessage: "인생 가볍다"),
+            FriendDataModel(image: "profileImage3", userName: "심솝트", statusMessage: "인생 중간이다"),
+            FriendDataModel(image: "profileImage4", userName: "최솝트", statusMessage: "코딩 어렵다"),
+            FriendDataModel(image: "profileImage5", userName: "구솝트", statusMessage: "클라 어렵다"),
+            FriendDataModel(image: "profileImage6", userName: "한솝트", statusMessage: "내가 어렵다"),
+            FriendDataModel(image: "profileImage7", userName: "손솝트", statusMessage: "인생 많이 어렵다"),
+            FriendDataModel(image: "profileImage8", userName: "정솝트", statusMessage: "인생 적게 어렵다"),
+            FriendDataModel(image: "profileImage9", userName: "민솝트", statusMessage: "인생 어중간하게 어렵다"),
+            FriendDataModel(image: "profileImage10", userName: "박솝트", statusMessage: "인생 적당히 어렵다")
         ])
     }
 }

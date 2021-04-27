@@ -175,33 +175,32 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nnA-dh-NH0">
-                                <rect key="frame" x="158.5" y="555.5" width="97" height="96"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8wP-hb-YFW">
+                                <rect key="frame" x="158.5" y="557.5" width="97" height="96"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="96" id="0No-75-LS9"/>
-                                    <constraint firstAttribute="width" constant="97" id="8ev-B5-aZx"/>
+                                    <constraint firstAttribute="height" constant="96" id="CWa-w4-eg8"/>
+                                    <constraint firstAttribute="width" constant="97" id="t86-un-IsC"/>
                                 </constraints>
-                                <state key="normal" image="profileUserImg"/>
-                            </button>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="g8b-yb-Onr"/>
                         <color key="backgroundColor" red="0.52941176470588236" green="0.56862745098039214" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="FmB-zE-Zqn" firstAttribute="top" secondItem="nnA-dh-NH0" secondAttribute="bottom" constant="8" id="2zh-J3-2A0"/>
                             <constraint firstItem="FmB-zE-Zqn" firstAttribute="centerX" secondItem="1YT-li-oud" secondAttribute="centerX" id="5cu-GE-Ld4"/>
+                            <constraint firstItem="FmB-zE-Zqn" firstAttribute="top" secondItem="8wP-hb-YFW" secondAttribute="bottom" constant="6" id="6QW-Sr-zHZ"/>
                             <constraint firstItem="dU4-ka-MCJ" firstAttribute="top" secondItem="FmB-zE-Zqn" secondAttribute="bottom" constant="42" id="9YH-xK-PVs"/>
                             <constraint firstItem="g8b-yb-Onr" firstAttribute="trailing" secondItem="dU4-ka-MCJ" secondAttribute="trailing" id="AuI-vW-RQZ"/>
                             <constraint firstItem="dU4-ka-MCJ" firstAttribute="leading" secondItem="g8b-yb-Onr" secondAttribute="leading" id="Lhk-Pa-Uk8"/>
                             <constraint firstItem="U2U-rH-hd7" firstAttribute="top" secondItem="dU4-ka-MCJ" secondAttribute="bottom" constant="30" id="Mjo-1S-MKB"/>
+                            <constraint firstItem="8wP-hb-YFW" firstAttribute="centerX" secondItem="1YT-li-oud" secondAttribute="centerX" id="SIK-kG-zhg"/>
                             <constraint firstItem="g8b-yb-Onr" firstAttribute="bottom" secondItem="U2U-rH-hd7" secondAttribute="bottom" constant="58" id="Wcb-sQ-Ct2"/>
-                            <constraint firstItem="nnA-dh-NH0" firstAttribute="centerX" secondItem="1YT-li-oud" secondAttribute="centerX" id="XY4-bO-1pp"/>
                             <constraint firstItem="cph-LM-mZ8" firstAttribute="top" secondItem="g8b-yb-Onr" secondAttribute="top" constant="14" id="aiM-fs-Yvr"/>
                             <constraint firstItem="cph-LM-mZ8" firstAttribute="leading" secondItem="g8b-yb-Onr" secondAttribute="leading" constant="18" id="sww-wF-FWo"/>
                             <constraint firstItem="U2U-rH-hd7" firstAttribute="centerX" secondItem="1YT-li-oud" secondAttribute="centerX" id="xkx-1L-GNp"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="profileImage" destination="nnA-dh-NH0" id="7YJ-y3-Fla"/>
+                        <outlet property="profileImage" destination="8wP-hb-YFW" id="2ah-rM-WHd"/>
                         <outlet property="userNameLabel" destination="FmB-zE-Zqn" id="FH3-5x-E16"/>
                     </connections>
                 </viewController>
@@ -215,7 +214,6 @@
         <image name="profileEditImg" width="20" height="21"/>
         <image name="profileStoryImg" width="20" height="23"/>
         <image name="profileTalkImg" width="20" height="19"/>
-        <image name="profileUserImg" width="97" height="96"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

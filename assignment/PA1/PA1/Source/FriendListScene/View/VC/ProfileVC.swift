@@ -10,7 +10,7 @@ import UIKit
 class ProfileVC: UIViewController {
     var viewTranslation = CGPoint(x: 0, y: 0)
 
-    @IBOutlet weak var profileImage: UIButton!
+    @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
     
     var image: String?
@@ -28,9 +28,7 @@ class ProfileVC: UIViewController {
     
     func setConfigure() {
         if let image = UIImage(named: image ?? "") {
-            profileImage.setImage(image, for: .normal)
-            profileImage.imageView?.contentMode = .scaleAspectFill
-            profileImage.imageView?.sizeToFit()
+            profileImage.image = image
         }
         userNameLabel.text = name
     }
