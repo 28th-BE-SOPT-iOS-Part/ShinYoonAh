@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FriendListVC: UIViewController {
+class FriendListVC: UIViewController{
     @IBOutlet weak var settingButton: UIButton!
     @IBOutlet weak var friendTableView: UITableView!
     
@@ -77,6 +77,33 @@ extension FriendListVC: UITableViewDelegate {
             return configuration
         }
         return nil
+    }
+    
+    func tableView(_ tableView: UITableView, contextMenuConfigurationForRowAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
+        return UIContextMenuConfiguration(identifier: nil, previewProvider:{
+            if let previewViewController =
+                    self.storyboard?.instantiateViewController(identifier:"ProfileVC") as? ProfileVC {
+                
+                if indexPath.section == 0 {
+                    previewViewController.image = "profileUserImg"
+                    previewViewController.name = "신윤아"
+                } else {
+                    previewViewController.image = self.friendList[indexPath.row].image
+                    previewViewController.name = self.friendList[indexPath.row].userName
+                }
+                
+                return previewViewController
+            } else {
+                return nil
+            }
+        }, actionProvider: { suggestedActions in
+            let chatAction = UIAction(title: NSLocalizedString("채팅하기", comment: ""), image: UIImage(systemName: "message")) { action in }
+            let voiceAction = UIAction(title: NSLocalizedString("보이스톡", comment: ""), image: UIImage(systemName: "phone")) { action in }
+            let faceAction = UIAction(title: NSLocalizedString("페이스톡", comment: ""), image: UIImage(systemName: "video")) { action in }
+            let giftAction = UIAction(title: NSLocalizedString("선물하기", comment: ""), image: UIImage(systemName: "gift")) { action in }
+            
+            return UIMenu(title: "", children: [chatAction, voiceAction, faceAction, giftAction])
+        })
     }
 }
 
