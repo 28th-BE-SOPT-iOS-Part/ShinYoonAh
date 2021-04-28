@@ -90,6 +90,24 @@ extension FriendListVC {
     private func setButton() {
         settingButton.setImage(UIImage(named: "settingIcon"), for: .normal)
         settingButton.sizeToFit()
+        settingButton.addTarget(self, action: #selector(touchUpSetting), for: .touchUpInside)
+    }
+}
+
+// MARK: - Action
+extension FriendListVC {
+    @objc
+    func touchUpSetting() {
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: UIAlertController.Style.actionSheet)
+        let editAction = UIAlertAction(title: "편집", style: .default)
+        let friendAction =  UIAlertAction(title: "친구 관리", style: .default, handler: nil)
+        let settingAction = UIAlertAction(title: "전체 설정", style: .default, handler: nil)
+        let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+        alert.addAction(editAction)
+        alert.addAction(friendAction)
+        alert.addAction(settingAction)
+        alert.addAction(cancelAction)
+        present(alert, animated: true)
     }
 }
 
