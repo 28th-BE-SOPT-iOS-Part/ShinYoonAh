@@ -63,6 +63,21 @@ extension FriendListVC: UITableViewDelegate {
         dvc.modalPresentationStyle = .overCurrentContext
         present(dvc, animated: true, completion: nil)
     }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        if indexPath.section == 1 {
+            let block = UIContextualAction(style: .destructive, title: "차단",
+                handler: { _,_,_ in })
+            
+            let hide = UIContextualAction(style: .normal, title: "숨김",
+                handler: { _,_,_ in })
+            hide.backgroundColor = .gray
+            
+            let configuration = UISwipeActionsConfiguration(actions: [block, hide])
+            return configuration
+        }
+        return nil
+    }
 }
 
 // MARK: - UI
