@@ -8,7 +8,7 @@
 |`1주차`|iOS기초, H.I.G를 통한 컴포넌트의 이해, 화면 전환 |21/04/09 |[🗂 🗂](https://github.com/28th-BE-SOPT-iOS-Part/ShinYoonAh/blob/main/assignment/PA1/READMEs/README.md)|
 |`2주차`|Autolayout를 통한 기초 UI구성, Scroll View의 이해 |21/04/23 |[🗂 🗂](https://github.com/28th-BE-SOPT-iOS-Part/ShinYoonAh/blob/main/assignment/PA1/READMEs/README2.md)|
 |`3주차`|TableView, CollectionView, 데이터 전달 방식 |21/05/07 |[🗂 🗂](https://github.com/28th-BE-SOPT-iOS-Part/ShinYoonAh/blob/main/assignment/PA1/READMEs/README3.md)|
-|`4주차`|Cocoapods&Networking + 솝커톤 전 보충 세미나 | ||
+|`4주차`|Cocoapods&Networking + 솝커톤 전 보충 세미나 |21/05/14 ||
 |`5주차`|디자인 합동 세미나 | ||
 |`6주차`|서버 합동 세미나 + 솝커톤 | ||
 |`7주차`|클론 코딩을 통한 실전 UI구성, Animation, 통신 보충 | ||
