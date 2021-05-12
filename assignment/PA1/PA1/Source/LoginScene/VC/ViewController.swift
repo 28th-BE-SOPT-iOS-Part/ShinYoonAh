@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var registerButton: UIButton!
     
+    let standard = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setLabel()
@@ -79,6 +81,7 @@ extension ViewController {
                         self.makeAlert(title: "알림",
                                        message: message,
                         okAction: { _ in
+                            print(self.standard.value(forKey: "user") ?? 0)
                             let sb = UIStoryboard.init(name: "Tabbar", bundle: nil)
                             guard let dvc = sb.instantiateViewController(identifier: "TabbarController") as? TabbarController else {
                                 return

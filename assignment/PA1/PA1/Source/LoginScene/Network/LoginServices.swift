@@ -84,7 +84,11 @@ struct LoginService{
         else { return .pathErr }
         
         switch statusCode {
-        case 200: return .success(decodedData.message)
+        case 200:
+            if let token = decodedData.data?.token {
+                UserDefaults.standard.set(token, forKey: "user")
+            }
+            return .success(decodedData.message)
         case 400: return .requestErr(decodedData.message)
         case 500: return .serverErr
         default: return .networkFail
