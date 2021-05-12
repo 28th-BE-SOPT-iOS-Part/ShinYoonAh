@@ -22,14 +22,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func touchUpLogin(_ sender: Any) {
-        if let email = emailTextField.text, let password = passwordTextField.text {
+        if let email = emailTextField.text,
+           let password = passwordTextField.text {
             if email != "" && password != "" {
-                let sb = UIStoryboard.init(name: "Tabbar", bundle: nil)
-                guard let dvc = sb.instantiateViewController(identifier: "TabbarController") as? TabbarController else {
-                    return
-                }
-                dvc.modalPresentationStyle = .fullScreen
-                present(dvc, animated: true, completion: nil)
+                loginAction()
             }
         }
     }
@@ -74,5 +70,32 @@ extension ViewController {
         registerButton.contentEdgeInsets = .init(top: 13, left: 0, bottom: 13, right: 0)
         registerButton.layer.cornerRadius = 5
     }
+    
+    func loginAction() {
+        LoginService.shared.login(email: self.emailTextField.text!, password: self.passwordTextField.text!) { result in
+                switch result {
+                case .success(let message):
+                    if let message = message as? String{
+                        self.makeAlert(title: "알림",
+                                       message: message,
+                        okAction: { _ in
+                            let sb = UIStoryboard.init(name: "Tabbar", bundle: nil)
+                            guard let dvc = sb.instantiateViewController(identifier: "TabbarController") as? TabbarController else {
+                                return
+                            }
+                            dvc.modalPresentationStyle = .fullScreen
+                            self.present(dvc, animated: true, completion: nil)
+                        })
+                    }
+                case .requestErr(let message):
+                    if let message = message as? String{
+                        self.makeAlert(title: "알림",
+                                  message: message)
+                    }
+                default :
+                    print("ERROR")
+                }
+            }
+        }
 }
 

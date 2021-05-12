@@ -3,13 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		C1EA38DFD016DBBBEE7BB64A /* Pods_PA1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 476F013D23EE617ECF25EDFB /* Pods_PA1.framework */; };
 		ED29CBDB2622C56F00337960 /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED29CBDA2622C56F00337960 /* Tabbar.storyboard */; };
 		ED29CBE22622C62000337960 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED29CBE12622C62000337960 /* TabbarController.swift */; };
+		ED3EFA52264C49490041DFF1 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3EFA51264C49490041DFF1 /* NetworkResult.swift */; };
+		ED3EFA55264C4A120041DFF1 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3EFA54264C4A120041DFF1 /* UserModel.swift */; };
+		ED3EFA57264C4A4E0041DFF1 /* LoginServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3EFA56264C4A4E0041DFF1 /* LoginServices.swift */; };
+		ED3EFA59264C4CEE0041DFF1 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3EFA58264C4CEE0041DFF1 /* APIConstants.swift */; };
+		ED3EFA5B264C4DBB0041DFF1 /* Extension+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3EFA5A264C4DBB0041DFF1 /* Extension+UIViewController.swift */; };
 		ED76BDC126252B90002FE2DB /* FriendList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED76BDC026252B90002FE2DB /* FriendList.storyboard */; };
 		ED76BDC626252BB3002FE2DB /* FriendListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED76BDC526252BB3002FE2DB /* FriendListVC.swift */; };
 		ED76BDC926252BCE002FE2DB /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED76BDC826252BCE002FE2DB /* Chat.storyboard */; };
@@ -46,6 +51,11 @@
 		BAFB4E32D7FC0A6C4820A275 /* Pods-PA1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PA1.release.xcconfig"; path = "Target Support Files/Pods-PA1/Pods-PA1.release.xcconfig"; sourceTree = "<group>"; };
 		ED29CBDA2622C56F00337960 /* Tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabbar.storyboard; sourceTree = "<group>"; };
 		ED29CBE12622C62000337960 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
+		ED3EFA51264C49490041DFF1 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		ED3EFA54264C4A120041DFF1 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		ED3EFA56264C4A4E0041DFF1 /* LoginServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginServices.swift; sourceTree = "<group>"; };
+		ED3EFA58264C4CEE0041DFF1 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		ED3EFA5A264C4DBB0041DFF1 /* Extension+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIViewController.swift"; sourceTree = "<group>"; };
 		ED76BDC026252B90002FE2DB /* FriendList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FriendList.storyboard; sourceTree = "<group>"; };
 		ED76BDC526252BB3002FE2DB /* FriendListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListVC.swift; sourceTree = "<group>"; };
 		ED76BDC826252BCE002FE2DB /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
@@ -96,7 +106,6 @@
 				1E5271EEA42D854F26400205 /* Pods-PA1.debug.xcconfig */,
 				BAFB4E32D7FC0A6C4820A275 /* Pods-PA1.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -111,6 +120,8 @@
 		ED29CBDE2622C57D00337960 /* LoginScene */ = {
 			isa = PBXGroup;
 			children = (
+				ED3EFA53264C496B0041DFF1 /* Model */,
+				ED3EFA50264C49370041DFF1 /* Network */,
 				EDA51D03261D4B0100EF615D /* VC */,
 				EDA51CF0261D4A7500EF615D /* Main.storyboard */,
 			);
@@ -178,6 +189,24 @@
 				ED76BDE826252C8A002FE2DB /* View */,
 			);
 			path = SettingScene;
+			sourceTree = "<group>";
+		};
+		ED3EFA50264C49370041DFF1 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				ED3EFA51264C49490041DFF1 /* NetworkResult.swift */,
+				ED3EFA56264C4A4E0041DFF1 /* LoginServices.swift */,
+				ED3EFA58264C4CEE0041DFF1 /* APIConstants.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		ED3EFA53264C496B0041DFF1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ED3EFA54264C4A120041DFF1 /* UserModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		ED76BDC326252B94002FE2DB /* View */ = {
@@ -340,6 +369,7 @@
 			children = (
 				EDA51D0A261D4F3700EF615D /* Extension+UITextField.swift */,
 				EDD670A62637E95400B35068 /* Extension+UIColor.swift */,
+				ED3EFA5A264C4DBB0041DFF1 /* Extension+UIViewController.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -500,12 +530,14 @@
 				ED76BDEB26252C9A002FE2DB /* SettingVC.swift in Sources */,
 				EDC52B1A263903BF004627A1 /* MenuCVC.swift in Sources */,
 				EDD670A32637E67B00B35068 /* FriendDataModel.swift in Sources */,
+				ED3EFA57264C4A4E0041DFF1 /* LoginServices.swift in Sources */,
 				EDA51CEF261D4A7500EF615D /* ViewController.swift in Sources */,
 				EDA51D0B261D4F3700EF615D /* Extension+UITextField.swift in Sources */,
 				ED76BDC626252BB3002FE2DB /* FriendListVC.swift in Sources */,
 				ED76BDD826252C4C002FE2DB /* InfoVC.swift in Sources */,
 				ED76BDE126252C6D002FE2DB /* ShopVC.swift in Sources */,
 				EDA51CEB261D4A7500EF615D /* AppDelegate.swift in Sources */,
+				ED3EFA59264C4CEE0041DFF1 /* APIConstants.swift in Sources */,
 				EDD670992637E3C000B35068 /* UserTVC.swift in Sources */,
 				EDD670A72637E95400B35068 /* Extension+UIColor.swift in Sources */,
 				ED76BDF126253CA2002FE2DB /* ProfileVC.swift in Sources */,
@@ -513,6 +545,9 @@
 				EDA51D08261D4B3500EF615D /* CheckViewController.swift in Sources */,
 				EDA51D05261D4B2A00EF615D /* RegisterViewController.swift in Sources */,
 				ED29CBE22622C62000337960 /* TabbarController.swift in Sources */,
+				ED3EFA55264C4A120041DFF1 /* UserModel.swift in Sources */,
+				ED3EFA5B264C4DBB0041DFF1 /* Extension+UIViewController.swift in Sources */,
+				ED3EFA52264C49490041DFF1 /* NetworkResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
