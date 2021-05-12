@@ -15,6 +15,7 @@
 		ED3EFA57264C4A4E0041DFF1 /* LoginServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3EFA56264C4A4E0041DFF1 /* LoginServices.swift */; };
 		ED3EFA59264C4CEE0041DFF1 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3EFA58264C4CEE0041DFF1 /* APIConstants.swift */; };
 		ED3EFA5B264C4DBB0041DFF1 /* Extension+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3EFA5A264C4DBB0041DFF1 /* Extension+UIViewController.swift */; };
+		ED3EFA5D264C52A50041DFF1 /* SignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3EFA5C264C52A50041DFF1 /* SignUpModel.swift */; };
 		ED76BDC126252B90002FE2DB /* FriendList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED76BDC026252B90002FE2DB /* FriendList.storyboard */; };
 		ED76BDC626252BB3002FE2DB /* FriendListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED76BDC526252BB3002FE2DB /* FriendListVC.swift */; };
 		ED76BDC926252BCE002FE2DB /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED76BDC826252BCE002FE2DB /* Chat.storyboard */; };
@@ -56,6 +57,7 @@
 		ED3EFA56264C4A4E0041DFF1 /* LoginServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginServices.swift; sourceTree = "<group>"; };
 		ED3EFA58264C4CEE0041DFF1 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		ED3EFA5A264C4DBB0041DFF1 /* Extension+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIViewController.swift"; sourceTree = "<group>"; };
+		ED3EFA5C264C52A50041DFF1 /* SignUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModel.swift; sourceTree = "<group>"; };
 		ED76BDC026252B90002FE2DB /* FriendList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FriendList.storyboard; sourceTree = "<group>"; };
 		ED76BDC526252BB3002FE2DB /* FriendListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListVC.swift; sourceTree = "<group>"; };
 		ED76BDC826252BCE002FE2DB /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				ED3EFA54264C4A120041DFF1 /* UserModel.swift */,
+				ED3EFA5C264C52A50041DFF1 /* SignUpModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -528,6 +531,7 @@
 				ED76BDCF26252C27002FE2DB /* ChatVC.swift in Sources */,
 				EDD6709E2637E3F100B35068 /* FriendTVC.swift in Sources */,
 				ED76BDEB26252C9A002FE2DB /* SettingVC.swift in Sources */,
+				ED3EFA5D264C52A50041DFF1 /* SignUpModel.swift in Sources */,
 				EDC52B1A263903BF004627A1 /* MenuCVC.swift in Sources */,
 				EDD670A32637E67B00B35068 /* FriendDataModel.swift in Sources */,
 				ED3EFA57264C4A4E0041DFF1 /* LoginServices.swift in Sources */,

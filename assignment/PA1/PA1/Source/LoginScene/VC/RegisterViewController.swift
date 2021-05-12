@@ -20,17 +20,15 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func touchUpRegister(_ sender: Any) {
-        if let email = emailTextField.text, let password = passwordTextField.text, let confirm = confirmTextField.text {
-            if email != "" && password != ""
-                && confirm != "" && password == confirm {
-                let sb = UIStoryboard.init(name: "Tabbar", bundle: nil)
-                guard let dvc = sb.instantiateViewController(identifier: "TabbarController") as? TabbarController else {
-                    return
-                }
-                dvc.modalPresentationStyle = .fullScreen
-                present(dvc, animated: true) {
-                    self.navigationController?.popViewController(animated: false)
-                }
+        if let email = emailTextField.text,
+           let password = passwordTextField.text,
+           let confirm = confirmTextField.text {
+            print("pass: \(password) confirm: \(confirm)")
+            if !email.isEmpty && !password.isEmpty
+                && !confirm.isEmpty && password == confirm {
+                signupAction()
+            } else {
+                makeAlert(title: "회원가입", message: "조건을 충족하세요")
             }
         }
     }
@@ -59,4 +57,33 @@ class RegisterViewController: UIViewController {
         registerButton.contentEdgeInsets = .init(top: 13, left: 0, bottom: 13, right: 0)
         registerButton.layer.cornerRadius = 5
     }
+    
+    func signupAction() {
+        LoginService.shared.signup(email: emailTextField.text!, password: passwordTextField.text!, sex: "0", nickname: "sopt_test", phone: "010-0000-0000", birth: "1996-02-24") { result in
+                switch result {
+                case .success(let message):
+                    if let message = message as? String{
+                        self.makeAlert(title: "알림",
+                                       message: message,
+                        okAction: { _ in
+                            let sb = UIStoryboard.init(name: "Tabbar", bundle: nil)
+                            guard let dvc = sb.instantiateViewController(identifier: "TabbarController") as? TabbarController else {
+                                return
+                            }
+                            dvc.modalPresentationStyle = .fullScreen
+                            self.present(dvc, animated: true) {
+                                self.navigationController?.popViewController(animated: false)
+                            }
+                        })
+                    }
+                case .requestErr(let message):
+                    if let message = message as? String{
+                        self.makeAlert(title: "알림",
+                                  message: message)
+                    }
+                default :
+                    print("ERROR")
+                }
+            }
+        }
 }
